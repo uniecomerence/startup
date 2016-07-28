@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar class="bg-blue">
+    <h1 class="title white">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="background">
+    <!-- add ng-submit="doLogin() here -->
+    <form ng-submit="login()" ng-controller="loginCtrl">
+      <div class="list">
+        <label class="item item-input item-input-curved">
+          <span class="input-label white">Email</span>
+          <input type="text" ng-model="person.email">
+        </label>
+        <label class="item item-input item-input-curved">
+          <span class="input-label white">Password</span>
+          <input type="password" ng-model="person.password">
+        </label>
+
+        <!-- ui-sref is a temporary fix to navigate past the login screen -->
+        <label class="item">
+          <button class="button button-block button-positive retro red" type="submit">Log in</button>
+        </label>
+
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
